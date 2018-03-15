@@ -18,6 +18,7 @@
 	background: cadetblue;
 	.bold();
 	transition: all 0.4s ease;
+	align-self: center;
 	&:hover {
 		color: cadetblue;
 		background: white;
@@ -38,6 +39,16 @@
 		&:active {
 			color: white;
 			background: red;
+		}
+	}
+}
+
+@media screen and (max-width: 820px){
+	.btn {
+
+		&_delete {
+			margin-right: auto;
+			margin-left: auto;
 		}
 	}
 }
