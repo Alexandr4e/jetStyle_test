@@ -48,12 +48,12 @@ $(document).ready(function() {
 			$itemIcon.text(letterA + letterB);
 			$itemName.text(newName);
 			$itemLastName.text(newLastName);
-			$itemPhone.text(newPhone).attr('href', "tel:" + newPhone + "");
+			$itemPhone.text(newPhone).attr('href', 'tel:' + newPhone + '');
 
 			// Добавление готового контакта
 			$clone.appendTo($list).show();
-			$clone.removeAttr("id");
-			$clone.css( "display", "flex" );
+			$clone.removeAttr('id');
+			$clone.css('display', 'flex');
 
 			// Очищаем поля input
 			$name.val('');
