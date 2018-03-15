@@ -3,9 +3,8 @@
 	vertical-align: top;
 	height: @35;
 	padding: 0 @28;
-	border: 2px solid black;
+	border: 1px solid black;
 	border-radius: 6px;
-	//box-shadow: 0 @9 @34 rgba(31, 29, 38, 0.8);
 	cursor: pointer;
 	position: relative;
 
@@ -22,34 +21,22 @@
 		color: cadetblue;
 		background: white;
 	}
-}
-
-@media screen and (max-width: 480px) {
-	.btn {
-		height: @38;
-		padding: 0 @18;
-
-		font-size: @14;
-		line-height: @38;
-
-		&_dark {
-			&:hover {
-				background-color: #383542;
-			}
-			&:active {
-				background-color: #7ed321;
-			}
+	&:active {
+		color: black;
+		background: cadetblue;
+	}
+	&_delete {
+		background: white;
+		color: cadetblue;
+		border-color: cadetblue;
+		&:hover {
+			color: red;
+			background: white;
+			border-color: red;
 		}
-
-		&__front {
-			.btn:hover & {
-				top: 0;
-			}
-		}
-		&__icon {
-			.btn:hover & {
-				top: -100%;
-			}
+		&:active {
+			color: white;
+			background: red;
 		}
 	}
 }

@@ -13,6 +13,7 @@
 
 		<form class="form">
 			<div class="contacts__form">
+
 				<div class="contacts__form-block">
 					<label for="first-name" class="contacts__form-block-title">Имя:</label>
 					<input id="first-name" type="text" class="form__input js-input" placeholder="Иван">
@@ -29,20 +30,22 @@
 				</div>
 
 				<div class="contacts__form-block">
-					<button class="contacts__form-btn btn" id="add-button">Сохранить контакт</button>
+					<button class="btn" id="add-button">Сохранить контакт</button>
 				</div>
 
 			</div>
 		</form>
 
 		<ul class="contacts__list" id="list">
+
 			<li class="list-item js-list-item" id="list-item-for-clone">
 				<div class="list-item__icon js-list-icon"></div>
 				<span class="list-item__first-name js-list-first-name" ></span>
 				<span class="list-item__last-name js-list-last-name"></span>
-				<a href="tel:79123456789" class="list-item__phone js-list-phone"></a>
-				<button class="list-item__delete btn js-delete">Удалить контакт</button>
+				<a href="tel:" class="list-item__phone js-list-phone"></a>
+				<button class="btn btn_delete js-delete">Удалить контакт</button>
 			</li>
+
 		</ul>
 
 	</div>
