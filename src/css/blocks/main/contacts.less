@@ -1,0 +1,50 @@
+.contacts {
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+
+	&__title {
+		font-size: 32px;
+		text-align: center;
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+	&__form {
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 40px;
+	}
+	&__form-block {
+		align-self: flex-end;
+		margin-right: 20px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__form-block-title {
+		display: block;
+		font-size: 24px;
+		cursor: pointer;
+		margin-bottom: 10px;
+	}
+	&__form-block-input {
+		font-size: 18px;
+		padding: 4px 12px;
+		border-radius: 6px;
+	}
+	&__form-block-input_alert {
+		border-color: red;
+	}
+	&__form-btn {
+		height: 34px;
+		cursor: pointer;
+		font-size: 14px;
+		border-radius: 6px;
+		&:hover {
+			background-color: cadetblue;
+		}
+	}
+	&__list {}
+}

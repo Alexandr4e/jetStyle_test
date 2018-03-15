@@ -1,0 +1,50 @@
+{% extends 'parts/layout.twig' %}
+
+{% block title %}
+	<title>Test JetStyle</title>
+{% endblock %}
+
+
+{% block content %}
+
+	<div class="contacts">
+
+		<h1 class="contacts__title">Введите свои данные:</h1>
+
+		<form>
+			<div class="contacts__form">
+				<div class="contacts__form-block">
+					<label for="first-name" class="contacts__form-block-title">Имя:</label>
+					<input id="first-name" type="text" class="contacts__form-block-input js-input" placeholder="Иван">
+				</div>
+
+				<div class="contacts__form-block">
+					<label for="last-name" class="contacts__form-block-title">Фамилия:</label>
+					<input id="last-name" type="text" class="contacts__form-block-input js-input" placeholder="Иванов">
+				</div>
+
+				<div class="contacts__form-block">
+					<label for="phone" class="contacts__form-block-title">Телефон:</label>
+					<input id="phone" type="text" class="contacts__form-block-input js-input" placeholder="7(912)-34-56-789">
+				</div>
+
+				<div class="contacts__form-block">
+					<button class="contacts__form-btn" id="add-button">Сохранить контакт</button>
+				</div>
+
+			</div>
+		</form>
+
+		<ul class="contacts__list" id="list">
+			<li class="list-item js-list-item" id="list-item-for-clone">
+				<div class="list-item__icon js-list-icon"></div>
+				<span class="list-item__first-name js-list-first-name" ></span>
+				<span class="list-item__last-name js-list-last-name"></span>
+				<a href="tel:79123456789" class="list-item__phone js-list-phone"></a>
+				<button class="list-item__delete js-delete">Удалить контакт</button>
+			</li>
+		</ul>
+
+	</div>
+
+{% endblock %}
