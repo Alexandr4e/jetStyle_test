@@ -9,8 +9,7 @@ $(document).ready(function() {
 			$listItem = $('#list-item-for-clone'),
 			$addButton = $('#add-button');
 
-
-		//ADD CONTACT
+		// Добавляем контакт в таблицу
 		$addButton.click(function(){
 
 			var $clone = $listItem.clone(),
@@ -25,44 +24,46 @@ $(document).ready(function() {
 				letterB = newLastName.charAt(0);
 
 
-			$('.js-input').removeClass('contacts__form-block-input_alert');
+			$('.js-input').removeClass('form__input_error');
 
+			// Проверка на незаполненые поля
 			if ($name.val() === '' || $lastName.val() === '' || $phone.val() === '' ) {
 
 				if ($name.val() === '') {
-					$name.addClass('contacts__form-block-input_alert');
+					$name.addClass('form__input_error');
 				}
 
 				if ($lastName.val() === '') {
-					$lastName.addClass('contacts__form-block-input_alert');
+					$lastName.addClass('form__input_error');
 				}
 
 				if ($phone.val() === '') {
-					$phone.addClass('contacts__form-block-input_alert');
+					$phone.addClass('form__input_error');
 				}
 
 				return false;
 			}
 
+			// Заполнение контакта
 			$itemIcon.text(letterA + letterB);
 			$itemName.text(newName);
 			$itemLastName.text(newLastName);
 			$itemPhone.text(newPhone).attr('href', "tel:" + newPhone + "");
 
+			// Добавление готового контакта
 			$clone.appendTo($list).show();
 			$clone.removeAttr("id");
 			$clone.css( "display", "flex" );
 
+			// Очищаем поля input
 			$name.val('');
 			$lastName.val('');
 			$phone.val('');
 
 			return false;
-
 		});
 
-
-		// DELETE
+		// Удаляем контакт
 		$(document).on('click', '.js-delete', function() {
 			var $t = $(this),
 				$item = $t.closest('.js-list-item');

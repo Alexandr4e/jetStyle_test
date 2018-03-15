@@ -2,21 +2,23 @@
 .list-item {
 	border: solid 1px gray;
 	font-size: 18px;
-	padding: 4px 12px;
+	padding: 12px;
 	display: none;
 	align-items: center;
 	justify-content: space-between;
 
 	&__icon {
 		background-color: gainsboro ;
-		width: 30px;
-		height: 30px;
+		width: 40px;
+		height: 40px;
 		margin-right: 10px;
 		border-radius: 50%;
 		text-align: center;
-		padding-top: 8px;
-		font-size: 14px;
+		padding-top: 12px;
+		font-size: @14;
 		text-transform: uppercase;
+		color: white;
+		.bold();
 	}
 	&__first-name {
 		width: 25%;
@@ -31,19 +33,6 @@
 		&:hover {
 			text-decoration:underline;
 			color: gray;
-		}
-	}
-	&__delete {
-		border-radius: 5px;
-		border: solid 1px gray;
-		cursor: pointer;
-		width: 13%;
-		height: 24px;
-		font-size: 12px;
-		text-align: center;
-		&:hover {
-			border-color: red;
-			color: red;
 		}
 	}
 }
